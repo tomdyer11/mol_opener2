@@ -30,19 +30,14 @@ salt_remover = rdMolStandardize.FragmentRemover()
 
 if __name__ == '__main__':
     mols = Mol2MolSupplier(file='aligned_hets.mol2')
-    def get_partial_charge(mol):
+    for mol in mols:
         smiles = Chem.MolToSmiles(mol)
-        AllChem.ComputeGasteigerCharges(mol)
-        atoms = mol.GetAtoms()
-        charge_list = []
-        for atom in mol:
-            pc = atom.GetDoubleProp('_GasteigerCharge')
-            if pc != pc:
-                pc = 0
-            if pc == float('inf'):
-                pc = 10
-            charge_list.append(pc)
-        return charge_list
+        print(smiles)
+        new_mol = Chem.RemoveHs(Chem.MolFromSmiles(smiles, sanitize=False), sanitize=False)
+        print(Chem.MolToSmiles(new_mol))
+        AllChem.ComputeGasteigerCharges(new_mol)
+        charges = [new_mol.GetAtomWithIdx(atom.GetIdx()).GetDoubleProp('_GasteigerCharge') for atom in new_mol.GetAtoms()]
+        print(charges)
 
 
 
@@ -52,8 +47,7 @@ if __name__ == '__main__':
 
 
 
-
-#m = Chem.MolFromSmiles('c1ccccc1C(=O)O')
+    #m = Chem.MolFromSmiles('c1ccccc1C(=O)O')
 #AllChem.ComputeGasteigerCharges(m)
 #m.GetAtomWithIdx(0).GetDoubleProp('_GasteigerCharge')
 #print(m)
