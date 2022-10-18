@@ -4,6 +4,8 @@
     <mapping directory="$PROJECT_DIR$" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/mol_opener_new" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/mol_opener_new/opener" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/newfileopener" vcs="Git" />
     <mapping directory="$PROJECT_DIR$/opener" vcs="Git" />
+    <mapping directory="$PROJECT_DIR$/opener(pythonproject)" vcs="Git" />
   </component>
 </project>

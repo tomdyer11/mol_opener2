@@ -51,7 +51,7 @@
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
       <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
-      <option name="SCRIPT_NAME" value="W:\Chemistry\Tom Dyer\python\mol2_file_opener.py" />
+      <option name="SCRIPT_NAME" value="W:/Chemistry/Tom Dyer/python/mol2_file_opener.py" />
       <option name="PARAMETERS" value="" />
       <option name="SHOW_COMMAND_LINE" value="false" />
       <option name="EMULATE_TERMINAL" value="false" />
@@ -74,7 +74,8 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1665761817961</updated>
-      <workItem from="1665761823739" duration="14399000" />
+      <workItem from="1665761823739" duration="14992000" />
+      <workItem from="1666091083818" duration="1419000" />
     </task>
     <servers />
   </component>
@@ -94,5 +95,6 @@
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
     <SUITE FILE_PATH="coverage/mol_opener2$mol2_opener2.coverage" NAME="mol2_opener2 Coverage Results" MODIFIED="1666090249531" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/mol_opener2$mol2_file_opener.coverage" NAME="mol2_file_opener Coverage Results" MODIFIED="1666092362597" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
   </component>
 </project>
