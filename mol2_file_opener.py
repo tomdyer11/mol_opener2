@@ -43,3 +43,17 @@ if __name__ == '__main__':
                 pc = 10
             charge_list.append(pc)
         return charge_list
+
+
+
+
+
+
+
+
+
+
+#m = Chem.MolFromSmiles('c1ccccc1C(=O)O')
+#AllChem.ComputeGasteigerCharges(m)
+#m.GetAtomWithIdx(0).GetDoubleProp('_GasteigerCharge')
+#print(m)
