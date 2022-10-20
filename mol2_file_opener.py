@@ -30,14 +30,24 @@ salt_remover = rdMolStandardize.FragmentRemover()
 
 if __name__ == '__main__':
     mols = Mol2MolSupplier(file='aligned_hets.mol2')
+    charge_dict = {}
+    keys = []
+    values = []
     for mol in mols:
 
-        smiles = Chem.MolToSmiles(mol, kekuleSmiles=False)
-        smiles_frame = Chem.MolToSmiles(Chem.RemoveHs(Chem.MolFromSmiles(smiles, sanitize=False), sanitize=False))
-        print(smiles_frame)
+        smiles_frame = Chem.MolToSmiles(Chem.RemoveHs(mol, sanitize=False))
+        keys.append(smiles_frame)
+
         new_mol = Chem.MolFromSmiles(smiles_frame.replace("+", ""))
         AllChem.ComputeGasteigerCharges(new_mol)
-        print([new_mol.GetAtomWithIdx(atom.GetIdx()).GetDoubleProp('_GasteigerCharge') for atom in new_mol.GetAtoms()])
+        gasteiger_charges = [new_mol.GetAtomWithIdx(atom.GetIdx()).GetDoubleProp('_GasteigerCharge') for atom in new_mol.GetAtoms()]
+        values.append(gasteiger_charges)
+
+    for key, value in zip(keys, values):
+        charge_dict[key] = value
+
+    print(charge_dict)
+
 
 
 
